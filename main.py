@@ -72,6 +72,7 @@ def main():
                 if args.verbose:
                     print(f"-> {function_call_result.parts[0].function_response.response}")
                 function_results_list.append(function_call_result.parts[0])
+            messages.append(types.Content(role="user", parts=function_resulsts_list))
         else:
             print(response.text)
 
